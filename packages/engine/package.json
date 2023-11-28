@@ -1,0 +1,9 @@
+{
+  "name": "pongers-engine",
+  "version": "0.0.1",
+  "main": "dist/pongers-engine.cjs.js",
+  "module": "dist/pongers-engine.esm.js",
+  "dependencies": {
+    "cross-env": "5.0.5"
+  }
+}

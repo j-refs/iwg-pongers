@@ -1,0 +1,10 @@
+
+
+export {
+	PADDING: 20,
+	WIDTH: 400,
+	HEIGHT: 400,
+	PADDLE_WIDTH: 10,
+	PADDLE_HEIGHT: 50
+};
+

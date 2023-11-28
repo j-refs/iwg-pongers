@@ -1,0 +1,32 @@
+{
+  "name": "pongers-game",
+  "version": "0.0.1",
+  "description": "Totally not just another pong game, made for the inchworm.games pong event",
+  "main": "dist/service.cjs.js",
+  "module": "dist/service.esm.js",
+  "scripts": {
+    "build": "preconstruct build",
+    "postinstall": "preconstruct dev"
+  },
+  "workspaces": [
+    "packages/*",
+    "app",
+    "service"
+  ],
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "@babel/core": "^7.23.3",
+    "@babel/preset-env": "^7.23.3"
+  },
+  "preconstruct": {
+    "packages": [
+      "packages/*",
+      "app",
+      "service"
+    ]
+  },
+  "devDependencies": {
+    "@preconstruct/cli": "^2.8.1"
+  }
+}
