@@ -2,7 +2,7 @@
 import {
 	DynamicObject,
 	BaseTypes
-} from "lange-gg";
+} from "lance-gg";
 
 
 

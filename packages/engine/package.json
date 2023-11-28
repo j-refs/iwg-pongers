@@ -4,6 +4,7 @@
   "main": "dist/pongers-engine.cjs.js",
   "module": "dist/pongers-engine.esm.js",
   "dependencies": {
-    "cross-env": "5.0.5"
+    "cross-env": "5.0.5",
+    "lance-gg": "^4.0.9"
   }
 }

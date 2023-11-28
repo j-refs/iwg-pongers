@@ -2,7 +2,14 @@
   "name": "pongers-app",
   "version": "0.0.1",
   "main": "dist/pongers-app.cjs.js",
+  "module": "dist/pongers-app.esm.js",
+  "scripts": {
+  	
+  },
   "dependencies": {
-    "cross-env": "5.0.5"
+    "cross-env": "5.0.5",
+    "lance-gg": "^4.0.9",
+    "pongers-engine": "*",
+    "query-string": "^8.1.0"
   }
 }
