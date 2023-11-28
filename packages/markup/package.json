@@ -1,9 +1,0 @@
-{
-  "name": "pongers-markup",
-  "version": "0.0.1",
-  "main": "dist/pongers-markup.cjs.js",
-  "module": "dist/pongers-markup.esm.js",
-  "dependencies": {
-    "cross-env": "5.0.5"
-  }
-}

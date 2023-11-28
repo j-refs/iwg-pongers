@@ -1,0 +1,65 @@
+Arguments: 
+  /data/data/com.termux/files/usr/bin/node /data/data/com.termux/files/usr/bin/yarn install
+
+PATH: 
+  /data/data/com.termux/files/home/.local/bin:/data/data/com.termux/files/usr/bin
+
+Yarn version: 
+  1.22.19
+
+Node version: 
+  20.2.0
+
+Platform: 
+  android arm64
+
+Trace: 
+  SyntaxError: /data/data/com.termux/files/home/projects/pongers-game/package.json: Expected double-quoted property name in JSON at position 925
+      at JSON.parse (<anonymous>)
+      at /data/data/com.termux/files/usr/lib/node_modules/yarn/lib/cli.js:1629:59
+      at Generator.next (<anonymous>)
+      at step (/data/data/com.termux/files/usr/lib/node_modules/yarn/lib/cli.js:310:30)
+      at /data/data/com.termux/files/usr/lib/node_modules/yarn/lib/cli.js:321:13
+
+npm manifest: 
+  {
+    "name": "pongers-game",
+    "version": "0.0.1",
+    "description": "Totally not just another pong game, made for the inchworm.games pong event",
+    "main": "src/main.js",
+    "scripts": {
+      "start": "node dist-server/main.js",
+      "start-debug": "node --inspect-brk dist-server/main.js",
+      "start-dev": "nodemon dist-server/main.js",
+      "postinstall": "webpack && babel src --source-maps --out-dir dist-server",
+      "build": "webpack && babel src --source-maps --out-dir dist-server",
+      "stats": "webpack --env production --profile --json > stats.json",
+      "dev": "webpack --watch"
+    },
+    "dependencies": {
+      "@babel/node": "^7.2.2",
+      "babel-loader": "^8.0.5",
+      "express": "^4.14.0",
+      "lance-gg": "^4.0.3",
+      "query-string": "^4.2.3",
+      "socket.io": "^2.5.0",
+      "webpack": "^3.8.1"
+    },
+    "devDependencies": {
+    	"@babel/cli": "^7.2.3",
+      "@babel/core": "^7.3.4",
+      "@babel/preset-env": "^7.3.4",
+    },
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/j-refs/iwg-pongers.git"
+    },
+    "author": "j-refs / werlious",
+    "license": "MIT"
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

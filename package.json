@@ -2,37 +2,34 @@
   "name": "pongers-game",
   "version": "0.0.1",
   "description": "Totally not just another pong game, made for the inchworm.games pong event",
-  "main": "dist/release.cjs.js",
-  "module": "dist/release.esm.js",
+  "main": "src/main.js",
   "scripts": {
-    "build": "preconstruct build",
-    "postinstall": "preconstruct dev",
-    "link-dev": "preconstruct dev",
-    "prec-fix": "preconstruct fix",
-    "prec-validate": "preconstruct validate",
-    "release": "yarn build && npm publish"
+    "start": "node dist-server/main.js",
+    "start-debug": "node --inspect-brk dist-server/main.js",
+    "start-dev": "nodemon dist-server/main.js",
+    "postinstall": "webpack && babel src --source-maps --out-dir dist-server",
+    "build": "webpack && babel src --source-maps --out-dir dist-server",
+    "stats": "webpack --env production --profile --json > stats.json",
+    "dev": "webpack --watch"
   },
-  "workspaces": [
-    "packages/*",
-    "app",
-    "service",
-    "release"
-  ],
-  "license": "MIT",
-  "private": true,
   "dependencies": {
-    "@babel/core": "^7.23.3",
-    "@babel/preset-env": "^7.23.3",
-    "@preconstruct/cli": "^2.8.1",
-    "lance-gg": "^4.0.9"
+    "@babel/node": "^7.2.2",
+    "babel-loader": "^8.0.5",
+    "express": "^4.14.0",
+    "lance-gg": "^4.0.3",
+    "query-string": "^4.2.3",
+    "socket.io": "^2.5.0",
+    "webpack": "^3.8.1"
   },
-  "preconstruct": {
-    "packages": [
-      "packages/*",
-      "app",
-      "service",
-      "release"
-    ]
+  "devDependencies": {
+  	"@babel/cli": "^7.2.3",
+    "@babel/core": "^7.3.4",
+    "@babel/preset-env": "^7.3.4"
   },
-  "devDependencies": {}
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/j-refs/iwg-pongers.git"
+  },
+  "author": "j-refs / werlious",
+  "license": "MIT"
 }
